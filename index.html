@@ -176,15 +176,6 @@
     .copy:hover { border-color: var(--accent); }
     .copy svg { width: 18px; height: 18px; }
 
-    .save {
-      margin-top: 1.6rem;
-      display: flex; align-items: center; justify-content: center; gap: .55rem;
-      width: 100%; padding: .9rem 1.2rem; border-radius: 999px;
-      border: 1.5px dashed var(--edge); background: transparent; color: var(--ink);
-      font: 600 1rem var(--body); text-decoration: none; cursor: pointer;
-    }
-    .save:hover { border-style: solid; border-color: var(--accent); }
-    .save svg { width: 20px; height: 20px; }
 
     footer { margin-top: 2.5rem; color: var(--muted); font-size: .9rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
     footer a { text-decoration: none; }
@@ -275,10 +266,6 @@
       </li>
     </ul>
 
-    <a class="save" id="saveContact" href="#" download="Grishma-Thumar.vcf">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M2 21a8 8 0 0 1 13-6.2M19 15v6M16 18h6"/></svg>
-      Save my contact
-    </a>
 
     <footer>
       <span>San Francisco, CA</span>
@@ -326,20 +313,6 @@
         });
       });
 
-      // "Save my contact" builds a vCard the phone can add to Contacts
-      var vcard = [
-        'BEGIN:VCARD', 'VERSION:3.0',
-        'N:Thumar;Grishma;;;', 'FN:Grishma Thumar',
-        'TITLE:Full-Stack Engineer',
-        'TEL;TYPE=CELL:+14157407237',
-        'EMAIL;TYPE=INTERNET:grishmathumar03@gmail.com',
-        'item1.URL:https://grishma2305.github.io/', 'item1.X-ABLabel:Portfolio',
-        'item2.URL:https://www.linkedin.com/in/gthumar/', 'item2.X-ABLabel:LinkedIn',
-        'item3.URL:https://github.com/grishma2305', 'item3.X-ABLabel:GitHub',
-        'ADR;TYPE=HOME:;;;San Francisco;CA;;USA',
-        'END:VCARD'
-      ].join('\r\n');
-      document.getElementById('saveContact').href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard);
     })();
   </script>
 </body>
